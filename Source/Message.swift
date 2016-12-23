@@ -21,13 +21,13 @@ public struct Announcement {
   public var attributedTitle: NSAttributedString?
   public var image: UIImage?
   public var secondaryImage: UIImage?
-  public var backgroundColor: UIColor
-  public var titleColor: UIColor
-  public var titleFont: UIFont
+  public var backgroundColor: UIColor?
+  public var titleColor: UIColor?
+  public var titleFont: UIFont?
   public var duration: TimeInterval
   public var action: (() -> Void)?
 
-  public init(title: String? = nil, attributedTitle: NSAttributedString? = nil, image: UIImage? = nil, secondaryImage: UIImage? = nil, backgroundColor: UIColor = ColorList.Whistle.background, titleColor:UIColor = ColorList.Whistle.title, titleFont:UIFont = FontList.Whistle.title, duration: TimeInterval = 2, action: (() -> Void)? = nil) {
+  public init(title: String? = nil, attributedTitle: NSAttributedString? = nil, image: UIImage? = nil, secondaryImage: UIImage? = nil, backgroundColor: UIColor? = ColorList.Whistle.background, titleColor:UIColor? = ColorList.Whistle.title, titleFont:UIFont? = FontList.Whistle.title, duration: TimeInterval = 2, action: (() -> Void)? = nil) {
     self.title = title
     self.attributedTitle = attributedTitle
     self.image = image
